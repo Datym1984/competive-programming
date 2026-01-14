@@ -1,7 +1,6 @@
 vector<bool> used;
 vector<int> sz;
 vector<vector<int>> g;
-int k, ans=0;
 
 void sizes(int v, int p) {
     sz[v] = 1;
