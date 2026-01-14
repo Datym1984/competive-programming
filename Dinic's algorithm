@@ -5,6 +5,7 @@ struct Dinic {
         edge(int v2, int u2, int c2, int f2) : v(v2), u(u2), c(c2), f(f2) {}
     };
 
+    static const int INF = 1e9;
     vector<int> level, ptr;
     vector<vector<int>> g;
     vector<edge> edges;
@@ -65,7 +66,7 @@ struct Dinic {
         int flow = 0;
         while (bfs(s, t)) {
             fill(all(ptr), 0);
-            while (int pushed = dfs(s, t, inf))
+            while (int pushed = dfs(s, t, INF))
                 flow += pushed;
         }
         return flow;
