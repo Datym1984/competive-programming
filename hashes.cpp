@@ -66,7 +66,7 @@ vector<ModInt> BuildSufHashes(string &s) {
     return S;
 }
 
-ModInt GetHash(int l, int r, vector<ModInt> &A, int flag=0) {//flag = 0 -> straight hash, flag != 0 -> reverse hash
+ModInt GetHash(int l, int r, vector<ModInt> &A, int flag=0) {//flag = 0 -> straight hash, flag != 0 -> reverse hash; return hash substring[l:r]
     if (flag == 0) {
         if (l == 0)
             return A[r];
