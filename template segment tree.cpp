@@ -32,7 +32,7 @@ struct segtree {
         t[v] = merge(t[v * 2 + 1], t[v * 2 + 2]);
     }
     
-    node get(int v, int l, int r, int L, int R) {
+    node get(int v, int l, int r, int L, int R) {//get on subsegment[l:r)
         if (r <= L || R <= l)
             return node();
         if (L <= l && r <= R)
@@ -42,7 +42,7 @@ struct segtree {
         return merge(get(v * 2 + 1, l, m, L, R), get(v * 2 + 2, m, r, L, R));
     }
     
-    void upd(int v, int l, int r, int L, int R, int val) {
+    void upd(int v, int l, int r, int L, int R, int val) {// update on subsegment[l:r)
         if (r <= l || R <= l)
             return;
         if (L <= l && r <= R) {
