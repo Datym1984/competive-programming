@@ -1,14 +1,3 @@
-//#pragma GCC optimize("Ofast","unroll-loops")
-#include <bits/stdc++.h>
-#define ld long double
-#define ll long long
-//#define int long long
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
-#define rep(n) for (int (i) = 0; (i) < (n); (i)++)
-
-using namespace std;
-
 struct TwoSat {
     vector<vector<int>> g, gr;
     vector<int> comp, order;
@@ -70,25 +59,3 @@ public:
         return ans;
     }
 };
-
-void solve() {
-    int n, m;
-    cin >> n >> m;
-    TwoSat helper(n);
-    for (int i = 0; i < m; i++) {
-        int v, u;
-        cin >> v >> u;
-        helper.add_or(v, u);
-    }
-    auto ans = helper.get();
-    for (int i : ans)
-        cout << i << ' ';
-    cout << '\n';
-}
-
-signed main() {
-    //ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.precision(20);
-    solve();
-}
