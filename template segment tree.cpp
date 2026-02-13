@@ -43,7 +43,7 @@ struct segtree {
     }
     
     void upd(int v, int l, int r, int L, int R, int val) {// update on subsegment[l:r)
-        if (r <= l || R <= l)
+        if (r <= L || R <= l)
             return;
         if (L <= l && r <= R) {
             apply(v, l, r, val);
