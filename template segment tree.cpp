@@ -23,7 +23,7 @@ struct segtree {
     template<class elem>
     void build(int v, int l, int r, vector<elem> &A) {
         if (l + 1 == r) {
-            apply(v, l, r, A);
+            apply(v, l, r, A[l]);
             return;
         }
         int m = (l + r) / 2;
