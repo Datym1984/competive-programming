@@ -1,14 +1,3 @@
-//#pragma GCC optimize("Ofast","unroll-loops")
-#include <bits/stdc++.h>
-#define ld long double
-#define ll long long
-//#define int long long
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
-#define rep(n) for (int (i) = 0; (i) < (n); (i)++)
-
-using namespace std;
-
 struct LCA {
     const int k = 20;
     int t = 0;
@@ -55,14 +44,3 @@ struct LCA {
         return depth[v] + depth[u] - depth[lca] * 2;
     }
 };
-
-void solve() {
-    
-}
-
-signed main() {
-    //ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.precision(20);
-    solve();
-}
